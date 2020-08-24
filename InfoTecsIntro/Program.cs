@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Net.Http.Headers;
 
 namespace InfoTecsIntro
 {
@@ -6,7 +9,8 @@ namespace InfoTecsIntro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DirectoryCopy copy = new DirectoryCopy();
+            copy.RecursiveCopyDirectory(new DirectoryInfo("C:\\Users\\riijii\\Downloads"), new DirectoryInfo("C:\\temp"));
         }
     }
 }
